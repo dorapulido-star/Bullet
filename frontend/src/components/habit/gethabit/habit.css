@@ -1,0 +1,154 @@
+/* Contenedor principal con padding y estilo moderno */
+.habit-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Limita el ancho máximo para pantallas grandes */
+}
+
+/* Contenedor de la tabla con scrollbar */
+.habit-table-container {
+  max-height: 400px; /* Altura máxima antes de mostrar el scrollbar */
+  overflow-y: auto; /* Scroll vertical */
+  overflow-x: hidden; /* Evita scroll horizontal */
+  margin-top: 20px;
+}
+
+/* Estilos para la tabla de hábitos */
+.habit-table {
+  width: 100%;
+  margin-bottom: 0; /* Elimina margen inferior para evitar espacio no deseado */
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden; /* Para que los bordes redondeados se vean bien */
+}
+
+/* Sobrescribimos estilos de Bootstrap para la tabla */
+.habit-table th,
+.habit-table td {
+  padding: 12px; /* Más espacio interno */
+  text-align: left;
+  vertical-align: middle; /* Alineación vertical centrada */
+}
+
+.habit-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+}
+
+.habit-table td {
+  border: 1px solid #dee2e6; /* Borde consistente con Bootstrap */
+}
+
+/* Botón "Añadir Hábito" con estilo mejorado */
+.add-habit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: purple;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.add-habit-btn:hover {
+  background-color: #6a1b9a;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.add-habit-btn:active {
+  transform: translateY(0);
+}
+
+/* Botones de acción (Editar/Eliminar) con estilo mejorado */
+.action-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.1s ease;
+}
+
+.action-btn.edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.action-btn.delete {
+  background-color: #ff4444;
+  color: white;
+}
+
+.action-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .habit-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .habit-table th,
+  .habit-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .add-habit-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .action-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .habit-table-container {
+    max-height: 300px; /* Reduce la altura en pantallas pequeñas */
+  }
+}
+
+/* Estilo para el scrollbar en navegadores webkit */
+.habit-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.habit-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.habit-table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.habit-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mensajes de carga y error */
+.text-center {
+  font-size: 16px;
+  color: #333;
+}
+
+.error-message {
+  font-size: 16px;
+  color: #dc3545; /* Rojo para errores */
+}

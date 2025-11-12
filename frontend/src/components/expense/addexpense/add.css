@@ -1,0 +1,54 @@
+.expense-form-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.expense-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.expense-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.expense-form-container input,
+.expense-form-container select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.expense-form-container .project-select {
+  width: 100%;
+}
+
+.project-select-container {
+  margin-top: 10px;
+}
+
+.project-select-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.error-message {
+  color: #ff4444;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  padding: 10px;
+  background-color: #4a90e2; /* Azul para el botón de agregar, consistente con el original */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #357abd;
+}

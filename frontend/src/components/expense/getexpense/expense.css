@@ -1,0 +1,154 @@
+/* Contenedor principal con padding y estilo moderno */
+.expense-container {
+  padding: 20px;
+  background-color: #f8f9fa; /* Fondo gris claro de Bootstrap */
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px; /* Limita el ancho máximo */
+}
+
+/* Contenedor de la tabla con scrollbar */
+.expense-table-container {
+  max-height: 400px; /* Altura máxima antes de mostrar el scrollbar */
+  overflow-y: auto; /* Scroll vertical */
+  overflow-x: hidden; /* Evita scroll horizontal */
+  margin-top: 20px;
+}
+
+/* Estilos para la tabla de gastos */
+.expense-table {
+  margin-bottom: 0; /* Elimina margen inferior */
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden; /* Para bordes redondeados */
+}
+
+/* Sobrescribimos estilos de Bootstrap para la tabla */
+.expense-table th,
+.expense-table td {
+  padding: 12px; /* Más espacio interno */
+  text-align: left;
+  vertical-align: middle; /* Alineación vertical centrada */
+}
+
+.expense-table th {
+  background-color: #4a90e2; /* Azul para encabezados */
+  color: white;
+  font-weight: 600;
+}
+
+.expense-table td {
+  border: 1px solid #dee2e6; /* Borde consistente con Bootstrap */
+}
+
+/* Botón "Add Expense" con estilo mejorado */
+.btn-primary.add-expense-btn {
+  padding: 10px 20px;
+  background-color: purple; /* Color personalizado */
+  border-color: purple;
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-primary.add-expense-btn:hover {
+  background-color: #6a1b9a; /* Morado más oscuro */
+  border-color: #6a1b9a;
+  transform: translateY(-1px);
+}
+
+.btn-primary.add-expense-btn:active {
+  transform: translateY(0);
+}
+
+/* Botones de acción (Editar/Eliminar) con estilo mejorado */
+.btn.action-btn {
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: opacity 0.3s ease, transform 0.1s ease;
+}
+
+.btn-warning.action-btn {
+  background-color: #4caf50; /* Verde para Editar */
+  border-color: #4caf50;
+}
+
+.btn-danger.action-btn {
+  background-color: #ff4444; /* Rojo para Eliminar */
+  border-color: #ff4444;
+}
+
+.btn.action-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn.action-btn:active {
+  transform: translateY(0);
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  .expense-container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .expense-table th,
+  .expense-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .btn-primary.add-expense-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .btn.action-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .expense-table-container {
+    max-height: 300px; /* Reduce altura en pantallas pequeñas */
+  }
+}
+
+/* Estilo para el scrollbar en navegadores webkit */
+.expense-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.expense-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.expense-table-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.expense-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mensajes de carga y error */
+.loading {
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error {
+  font-size: 16px;
+  color: #dc3545; /* Rojo para errores */
+  text-align: center;
+  margin-top: 20px;
+}
